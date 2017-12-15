@@ -1,0 +1,30 @@
+recette:
+    pattern:  /
+    defaults: { _controller: "AppBundle:Recette:index" }
+
+recette_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AppBundle:Recette:show" }
+
+recette_new:
+    pattern:  /new
+    defaults: { _controller: "AppBundle:Recette:new" }
+
+recette_create:
+    pattern:  /create
+    defaults: { _controller: "AppBundle:Recette:create" }
+    requirements: { _method: post }
+
+recette_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AppBundle:Recette:edit" }
+
+recette_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AppBundle:Recette:update" }
+    requirements: { _method: post|put }
+
+recette_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AppBundle:Recette:delete" }
+    requirements: { _method: post|delete }

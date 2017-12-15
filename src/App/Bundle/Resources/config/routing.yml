@@ -1,0 +1,12 @@
+app_homepage:
+    pattern:  /
+    defaults: { _controller: AppBundle:Default:index }
+
+AppBundle_recette:
+        resource: "@AppBundle/Resources/config/routing/recette.yml"
+        prefix:   /recette
+        
+app_ghassen:
+    pattern:  /ghassen
+    defaults: { _controller: AppBundle:Default:indexx }
+    

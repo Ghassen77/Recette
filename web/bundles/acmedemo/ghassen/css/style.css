@@ -1,0 +1,646 @@
+/*!
+ *  DELICIOUS
+ *  HTML One-Page Template
+ *  Author: MUUteam / Lukasz Florczak
+ *  http://muuteam.com
+ */
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  KEYFRAMES / ANIMATIONS 
+ * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* Finger in recipes section animation */
+@-webkit-keyframes bounceOutLeft { 
+    0% { 
+        -webkit-transform: translateX(0); 
+    } 
+    20% { 
+        opacity: 1; 
+        -webkit-transform: translateX(20px); 
+    } 
+    100% { 
+        opacity: 0; 
+        -webkit-transform: translateX(-200px); 
+    } 
+} 
+
+@keyframes bounceOutLeft { 
+    0% { 
+        transform: translateX(0); 
+    } 
+    20% { 
+        opacity: 1; 
+        transform: translateX(20px); 
+    } 
+    100% { 
+        opacity: 0; 
+        transform: translateX(-200px); 
+    } 
+} 
+
+.animated { 
+    -webkit-animation-duration: 3s; 
+    		animation-duration: 3s; 
+
+    -webkit-animation-fill-mode: both; 
+    		animation-fill-mode: both; 
+
+    -webkit-animation-iteration-count:infinite; 
+		    animation-iteration-count:infinite; 
+} 
+
+.bounceOutLeft { 
+    -webkit-animation-name: bounceOutLeft; 
+    		animation-name: bounceOutLeft; 
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  GLOBAL 
+ * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+a:focus {
+	outline: none;
+}
+
+body {
+	color: #685642;
+	font-family: 'Open Sans', sans-serif;
+	height: 100%;
+	width: 100%;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'Clicker Script', cursive;
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 6em;
+}
+
+h2 {
+	font-size: 4em;
+}
+
+h3 {
+	font-size: 3em;
+}
+
+html {
+	font-size: 100%;
+}
+
+.dotted {
+	border: dotted 2px #ffffff;
+}
+
+.left-side,
+.first {
+	border-left: none!important;
+}
+
+.left-side {
+	text-align: right;
+}
+
+.overlay {
+	background: rgba(0, 0, 0, 0.3);
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.right-side,
+.last {
+	border-right: none!important;
+}
+
+.right-side {
+	text-align: left;
+}
+
+.subtitle {
+	display: block;
+	font-size: 1.6em;
+	margin-bottom: 1em;
+	position: relative;
+	text-transform: uppercase;
+
+	border-bottom: solid 1px #ffffff;
+	border-top: solid 1px #ffffff;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  NAVIGATION
+ * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.fp-controlArrow  {
+	opacity: 0.8;
+
+	-webkit-transition: 0.75s;
+    	    transition: 0.75s;
+}
+
+.fp-controlArrow:hover {
+	opacity: 1;
+
+	-webkit-transition: 0.75s;
+    	    transition: 0.75s;
+}
+
+.navbar-brand {
+	font-family: 'Clicker Script', cursive;
+	font-size: 2em;
+	margin-right: 20px;
+}
+
+.navbar-default {
+	background: #ffffff;
+	border: none;
+	font-weight: 300;
+	opacity: 0.8;
+
+	-webkit-transition: 0.75s;
+    	    transition: 0.75s;
+}
+
+.navbar-default:hover {
+	opacity: 1;
+
+	-webkit-transition: 0.75s;
+    	    transition: 0.75s;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > .active > a {
+	background: none;
+	border: none;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > .active > a:hover {
+	background: none;
+	border: none;
+	color: #B3A580;
+}
+
+.navbar-right > li > a > i.fa {
+	font-size: 1.4em;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  INTRO SECTION 
+ * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+#intro {
+ 	background: url(../img/background_01.jpg) no-repeat 50% 50%;
+ 	background-position: center;
+ 	background-size: cover;
+ 	color: #ffffff;
+}
+
+.logo {
+ 	width: 240px;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  TEAM SECTION 
+ * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+#team {
+	background: #EBE8DF;
+}
+
+.first-name {
+	text-align: right;
+}
+
+.job {
+	font-family: 'Clicker Script', cursive;
+	font-size: 1.6em;
+}
+
+.last-name {
+	text-align: left;
+}
+
+.main-person {
+	margin-bottom: 3em;
+	margin-top: 2em;
+}
+
+.main-person img {
+	border: solid 5px #B3A580;
+	width: 200px;
+
+	-webkit-box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1);
+	   -moz-box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1);
+		    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1);
+}
+
+.main-person .job {
+	display: block;
+	font-size: 2.2em;
+	width: 100%;
+}
+
+.main-person .name {
+	border-bottom: solid 2px #B3A580;
+	border-top: solid 2px #B3A580;
+	display: inline-block;
+	font-size: 2em;
+	font-weight: 400;
+	line-height: 1.7em;
+	padding: 0px 20px;
+	text-transform: uppercase;
+	width: 150px;
+}
+
+.name {
+	display: block;
+	font-size: 1.2em;
+}
+
+.person {
+	border-left: dotted 1px #B3A580;
+}
+
+.person img {
+	border: solid 3px #B3A580;
+	margin-bottom: 1em;
+	width: 120px;
+
+	-webkit-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.1);
+	   -moz-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.1);
+		    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.1);
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  ABOUT SECTION 
+ * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+#about {
+	background: url(../img/background_02.jpg) no-repeat 50% 50%;
+	background-position: center;
+ 	background-size: cover;
+ 	color: #ffffff;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  RECIPES SECTION 
+ * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+#recipes {
+	color: #ffffff;
+	padding-top: 0px!important; /* There is propable a bug in FullPage JS script and it's add a additional padding-top in a slide section */
+}
+
+#slide-1 {
+	background: url(../img/background_03.jpg) no-repeat 50% 50%;
+	background-position: center;
+ 	background-size: cover;
+}
+
+#slide-2 {
+	background: url(../img/background_04.jpg) no-repeat 50% 50%;
+	background-position: center;
+ 	background-size: cover;
+}
+
+#slide-3 {
+	background: url(../img/background_05.jpg) no-repeat 50% 50%;
+	background-position: center;
+ 	background-size: cover;
+}
+
+#finger {
+	bottom: 20px;
+	display: none;
+	left: 50%;
+	position: fixed;
+}
+
+.ingredients {
+	border-left: dotted 1px #ffffff;
+	border-right: dotted 1px #ffffff;
+	list-style: none;
+
+	-webkit-padding-start: 10px;
+	-webkit-padding-end: 10px;
+}
+
+.ingredients img {
+	border: solid 2px #EBE8DF;
+	display: inline-block;
+	margin: 0.5em 1em;
+	width: 60px;
+
+	-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
+	   -moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
+		    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
+}
+
+.ingredients p {
+	display: inline-block;
+	font-size: 1.2em;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+.quantity {
+	font-size: 0.8em;
+	font-weight: lighter;
+}
+
+.summary {
+	border-top: solid 1px #ffffff;
+	border-bottom: solid 1px #ffffff;
+	display: block;
+	padding: 0.5em 0;
+}
+
+.summary span {
+	margin-left: 2em;
+}
+
+.summary span.first {
+	margin-left: 0;
+}
+
+.summary span i {
+	font-size: 1em;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  GALLERY SECTION 
+ * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+#gallery {
+	background: #1F2020;
+ 	color: #ffffff;
+}
+
+.gallery-grid {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.gallery-grid img:hover {
+	-webkit-filter: brightness(110%);
+	   -moz-filter: brightness(110%);
+	        filter: brightness(110%);
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  CONTACT SECTION 
+ * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+#contact {
+	background: #EBE8DF;
+	color: #675743;
+}
+
+#contact .dotted {
+	border-color: #675743;
+}
+
+#mail-response {
+	display: none;
+	font-size: 1.2em;
+}
+
+#postcard {
+	padding: 45px 30px 55px 30px;
+}
+
+#postcard .logo {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.address {
+	margin-top: 65px;
+}
+
+/* Contact Form */
+.form-control {
+	background: rgba(255, 255, 255, 0.4);
+	border: none;
+	border-radius: 0px;
+	color: #675743;
+	font-size: 1.2em;
+
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+		    box-shadow: none;
+
+	-webkit-transition: none;
+		 -o-transition: none;
+			transition: none;
+}
+
+.form-control:focus {
+	border: none;
+
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+		    box-shadow: none;
+}
+
+.form-control::-moz-placeholder {
+	color: #B1A682;
+	opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+	color: #B1A682;
+}
+.form-control::-webkit-input-placeholder {
+	color: #B1A682;
+}
+
+.has-error .form-control,
+.has-feedback .form-control,
+.has-success .form-control {
+	border: none;
+
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+		    box-shadow: none;
+}
+
+button.submit {
+	background-color: #EBE8DF;
+	border-radius: 40px;
+	color: #675743;
+	display: block;
+	font-size: 1.2em;
+	height: 80px;
+	left: 50%;
+	margin-left: -40px;
+	margin-top: -40px;
+	padding: 0;
+	position: absolute;
+	text-align: center;
+	text-transform: uppercase;
+	width: 80px;
+	z-index: 10;
+}
+
+.fa-exclamation {
+	margin-left: 0.05em;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  RESPONSIVE SECTION 
+ * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* Smartphones and small/portrait tablets */
+@media screen and (max-width: 991px) {
+
+	/* Recipes section */
+	.description {
+		margin-bottom: 30px;
+	}
+	.fp-controlArrow  {
+		display: none;
+	}
+	.ingredients {
+		border: none;
+		text-align: center;
+	}
+	.ingredients li {
+		display: inline-block;
+		width: 19.5%;
+	}
+	.ingredients li > p {
+		display: block;
+		width: 100%;
+	}
+}
+
+/* Smartphones */
+@media screen and (max-width: 767px) {
+
+	/* Global */
+	h1 {
+		font-size: 3em;
+	}
+	h2 {
+		font-size: 2.4em;
+	}
+	h3 {
+		font-size: 1.4em;
+	} 
+	.dotted {
+		border: none;
+	}
+
+	/* Navigation */ 
+	.navbar-right > li {
+		display: inline-block;
+	}
+
+	/* Intro */
+	.logo {
+		max-width: 40%;
+	}
+
+	/* Team */
+	.main-person img {
+		border-width: 3px;
+		max-width: 40%;
+	}
+	.main-person .job {
+		font-size: 1.8em;
+	}
+	.main-person .name {
+		font-size: 1.2em;
+		padding: 0px 5px;
+		width: 25%;
+	}
+	.name {
+		font-size: 1em;
+	}
+	.person {
+		border: none;
+		display: inline-block;
+		padding-bottom: 30px;
+		width: 49%;
+	}
+	.person img {
+		border-width: 2px;
+		max-width: 80%;
+	}
+
+	/* Gallery section */
+	.gallery-grid {
+		padding-bottom: 15px;
+	}
+
+	.gallery-grid img {
+		padding: 20px 15px 0 15px;
+	}
+	
+
+	/* Recipes section */
+	#recipes .container {
+		padding-top: 50px;
+	}
+	.description {
+		margin-bottom: 30px;
+	}
+	.ingredients {
+		border: none;
+		text-align: center;
+	}
+	.ingredients li {
+		display: inline-block;
+		font-size: 0.8em;
+		width: 32%;
+	}
+	.ingredients li > p {
+		display: block;
+		width: 100%;
+	}
+	.summary span {
+		font-size: 0.9em;
+		margin-left: 1em;
+	}
+	.quantity {
+		font-size: 0.8em;
+	}
+
+	/* Contact section */
+	#contact .container {
+		padding-bottom: 50px;
+	}
+	#contact .logo {
+		display: none;
+	}
+	button.dotted {
+		border: 2px dotted;
+	}
+}

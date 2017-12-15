@@ -1,0 +1,112 @@
+
+    
+    
+    <style type="text/css">
+.form-style-6{
+    font: 95% Arial, Helvetica, sans-serif;
+    max-width: 400px;
+    margin: 150px auto;
+    padding: 20px;
+    background: #F7F7F7;
+    float:left;
+   
+}
+.form-style-6 h1{
+    
+    background: #FFC0CB;
+    padding: 10px 0;
+    font-size: 190%;
+    font-weight: 100;
+    text-align: center;
+    color: #fff;
+    margin: 0px 0px 0px 0px;
+}
+.form-style-6 input[type="text"],
+.form-style-6 input[type="date"],
+.form-style-6 input[type="datetime"],
+.form-style-6 input[type="email"],
+.form-style-6 input[type="number"],
+.form-style-6 input[type="search"],
+.form-style-6 input[type="time"],
+.form-style-6 input[type="url"],
+.form-style-6 textarea,
+.form-style-6 select 
+{
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4%;
+    border: 1px solid #ccc;
+    padding: 3%;
+    color: #555;
+    font: 95% Arial, Helvetica, sans-serif;
+}
+.form-style-6 input[type="text"]:focus,
+.form-style-6 input[type="date"]:focus,
+.form-style-6 input[type="datetime"]:focus,
+.form-style-6 input[type="email"]:focus,
+.form-style-6 input[type="number"]:focus,
+.form-style-6 input[type="search"]:focus,
+.form-style-6 input[type="time"]:focus,
+.form-style-6 input[type="url"]:focus,
+.form-style-6 textarea:focus,
+.form-style-6 select:focus
+{
+    box-shadow: 0 0 5px #43D1AF;
+    padding: 3%;
+    border: 1px solid #43D1AF;
+}
+
+.form-style-6 input[type="submit"],
+.form-style-6 input[type="button"]{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    padding: 3%;
+    background: #FFC0CB;
+    border-bottom: 2px solid #FFC0CB;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;    
+    color: #fff;
+}
+.form-style-6 input[type="submit"]:hover,
+.form-style-6 input[type="button"]:hover{
+   
+}
+body {
+  background-image:url({{asset('bundles/acmedemo/ghassen/img/cc.jpg')}});
+  
+  
+  background-size:cover;
+  background-repeat: no-repeat;
+  margin:0;
+}  
+
+</style>
+{%include 'AppBundle::Default/nav.html.twig'%}
+<body>
+
+<div class="form-style-6">
+<h1>Ajouter une recette</h1>
+<br> 
+    {{ form_start(form) }}
+                                        
+                                        {{ form_widget(form.titre, {'attr': {'placeholder': 'Titre'} }) }}
+                                        {{ form_widget(form.description, {'attr': {'placeholder': 'Description'} }) }}
+                                     
+                                        <h2>Aliments</h2> 
+                                 
+                                        {{form_widget(form.aliments)}}
+                                        <br> <input type="submit" value="Ajouter"/>
+                                            {{ form_end(form) }}
+</div>
+</body>
